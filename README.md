@@ -1,12 +1,216 @@
-# React + Vite
+# 🛒 Zepto Mini – Frontend Internship Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **mini frontend clone inspired by Zepto**, built using **React + Vite + Tailwind CSS**.  
+This repository is used as a **real-world frontend internship project** where interns collaborate, contribute, and learn industry-standard workflows.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👨‍💼 Project Owner & Maintainer
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Qutos Frontend Team/ Full-Stack Developer  
+_Project Owner & Final Reviewer_
+
+---
+
+## 🎯 Internship Objective
+
+The goal of this internship is to help students:
+
+- Work on a **real shared codebase**
+- Learn **GitHub collaboration**
+- Follow **professional frontend practices**
+- Build **portfolio-worthy projects**
+- Understand **code reviews & deployment**
+
+---
+
+## 🧑‍🤝‍🧑 Team Structure & Repo Access
+
+- **Owner / Maintainer** → Qutos Team
+- **Core Devs / Interns** → Contributors  
+
+🔒 **Direct pushes to `main` are not allowed**
+
+---
+
+## 🌿 Branching Strategy (Mandatory)
+
+main → Production (Netlify)
+develop → Integration branch
+feature/* → Individual intern work
+
+
+### Example Feature Branches
+
+feature/navbar
+feature/cart-ui
+feature/product-card
+
+
+### Rules
+
+- Interns must work **only on feature branches**
+- All work must be submitted via **Pull Requests (PRs)**
+- PRs are merged **only after review**
+
+---
+
+## 🚀 Live Deployment (Netlify)
+
+- The project is hosted on **Netlify**
+- Every merged PR reflects on the **live site**
+- Pull Requests automatically generate **Preview Deployments**
+
+This allows interns to:
+- See their work live
+- Share preview URLs for review
+- Understand real-world CI/CD flow
+
+---
+
+## 🗣️ Discussions & Communication
+
+✅ **GitHub Discussions section is OPEN to all interns**
+
+You are encouraged to:
+- Ask questions
+- Suggest UI/UX improvements
+- Discuss better approaches
+- Help teammates
+
+> Healthy discussions lead to better learning and better code.
+
+---
+
+## 📋 Task Assignment & Workflow
+
+- Tasks are created using **GitHub Issues**
+- Each intern is assigned specific features/pages
+- **One task = One feature branch = One PR**
+
+### Pull Request Must Include
+
+- Clear description of work done
+- Screenshots or Netlify preview link
+- Clean and meaningful commit history
+
+---
+
+## 🧪 Code Quality Guidelines
+
+Mandatory practices:
+
+- Reusable and modular components
+- Clean and readable folder structure
+- ❌ No unnecessary `console.log`
+- Responsive and mobile-first UI
+
+---
+
+## 📁 Maintain Folder Structure
+
+
+---
+
+## 📜 Internship Certificate Policy
+
+- Internship duration starts from the **official start date**
+- **Internship certificate will be issued within 20–30 days**
+  **after successful completion** of the internship
+  
+- Certificate will be issued **only if**:
+  - Pull Requests are merged
+  - Code quality and participation are satisfactory
+
+❌ No certificate will be issued for inactive or incomplete participation.
+
+---
+
+## 📌 Internship Completion Requirements
+
+Each intern must submit:
+
+- List of merged Pull Requests
+- Live Netlify preview links
+- Short explanation of individual contributions
+
+These will help interns build a **strong frontend portfolio**.
+
+---
+
+## ⭐ Evaluation Criteria
+
+Interns will be evaluated based on:
+
+- Code quality
+- Consistency and discipline
+- Collaboration with the team
+- Pull Request quality
+- Willingness to learn and improve
+
+Top contributors may receive:
+
+- ⭐ Core contributor recognition
+- 💼 LinkedIn recommendation
+- 🏅 Special mention in repository
+
+---
+
+---
+
+## 📅 Minimum Weekly Contribution (Mandatory)
+
+To remain **active and eligible for internship certification**, each intern must meet **at least ONE contribution per week**.
+
+### ✅ Accepted Weekly Contributions
+
+**Option A – Feature Contribution (Preferred)**
+- At least **2 meaningful Pull Request per week**
+- PR must:
+  - Address a real feature, bug, or improvement
+  - Follow project structure
+  - Be reviewable and mergeable
+
+**Option B – Support Contribution**
+If no feature is assigned:
+- Review at least **2 Pull Request**
+- Improve UI/UX of an existing component
+- Refactor code or improve responsiveness
+- Fix bugs or performance issues
+
+⚠️ **Low-effort PRs (typos only, fake changes, empty commits) are NOT counted.**
+
+---
+
+## ⏳ Inactivity Policy
+
+- **7 days without contribution** → Warning
+- **10 days without contribution** → Internship may be discontinued
+- Exceptions are allowed **only with prior notice**
+
+---
+
+## 🤝 Contribution Agreement
+
+By contributing to this repository, interns agree to:
+
+- Follow all guidelines mentioned above
+- Respect code reviews and teammates
+- Maintain professional and ethical conduct
+
+---
+
+## 📬 Support & Help
+
+For any questions or help:
+
+- Use **GitHub Discussions**
+- Comment on relevant **Issues or Pull Requests**
+- Ask during review sessions
+
+---
+
+### 🚀 Let’s build, learn, and grow together!
+
+**Welcome to Internship Program!** 👨‍💻👩‍💻

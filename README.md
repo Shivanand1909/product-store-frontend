@@ -1,4 +1,5 @@
-# 🛒 Zepto Mini – Frontend Internship Project
+# 🛒 Product-store-frontend
+# 🔗 [Zepto Mini – Frontend Internship Project](http://general-store2.netlify.app/) 
 
 A **mini frontend clone inspired by Zepto**, built using **React + Vite + Tailwind CSS**.  
 This repository is used as a **real-world frontend internship project** where interns collaborate, contribute, and learn industry-standard workflows.

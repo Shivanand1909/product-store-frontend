@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-white; /* Optional: Set a default background color */
+}
+
+.card {
+    @apply bg-white rounded-lg shadow-sm p-4 hover:shadow-md;
+}
+
+.btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded-lg hover:bg-emerald-700;
+}

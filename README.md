@@ -1,6 +1,6 @@
 ## 🛒 🔗 [Product-store-frontend Project](http://general-store2.netlify.app/) 
 
-A **mini frontend clone inspired by Zepto**, built using **React + Vite + Tailwind CSS**.  
+A **mini frontend clone inspired by Zepto** [Zepto.com](https://www.zepto.com/) , built using **React + Vite + Tailwind CSS**.  
 This repository is used as a **real-world frontend internship project** where interns collaborate, contribute, and learn industry-standard workflows.
 
 ---
@@ -103,19 +103,18 @@ Mandatory practices:
 
 - Reusable and modular components
 - Clean and readable folder structure
-- ❌ No unnecessary `console.log`
+- No unnecessary `console.log`
 - Responsive and mobile-first UI
 
 ---
 
-## 📁 Maintain Folder Structure
-
+## 📁 Maintain Folder Structure (Compulsory)
 
 ---
 
 ## 📜 Internship Certificate Policy
 
-- Internship duration starts from the **official start date**
+- Internship duration starts from the **Individual Contributions date**
 - **Internship certificate will be issued within 20–30 days**
   **after successful completion** of the internship
   
@@ -149,24 +148,16 @@ Interns will be evaluated based on:
 - Pull Request quality
 - Willingness to learn and improve
 
-Top contributors may receive:
-
-- ⭐ Core contributor recognition
-- 💼 LinkedIn recommendation
-- 🏅 Special mention in repository
-
----
-
 ---
 
 ## 📅 Minimum Weekly Contribution (Mandatory)
 
-To remain **active and eligible for internship certification**, each intern must meet **at least ONE contribution per week**.
+To remain **active and eligible for internship certification**, each intern must meet **at least 1 contribution per week**.
 
 ### ✅ Accepted Weekly Contributions
 
 **Option A – Feature Contribution (Preferred)**
-- At least **2 meaningful Pull Request per week**
+- At least **1 meaningful Pull Request per week**
 - PR must:
   - Address a real feature, bug, or improvement
   - Follow project structure
@@ -174,7 +165,6 @@ To remain **active and eligible for internship certification**, each intern must
 
 **Option B – Support Contribution**
 If no feature is assigned:
-- Review at least **2 Pull Request**
 - Improve UI/UX of an existing component
 - Refactor code or improve responsiveness
 - Fix bugs or performance issues
@@ -185,7 +175,6 @@ If no feature is assigned:
 
 ## ⏳ Inactivity Policy
 
-- **7 days without contribution** → Warning
 - **10 days without contribution** → Internship may be discontinued
 - Exceptions are allowed **only with prior notice**
 

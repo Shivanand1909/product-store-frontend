@@ -3,8 +3,12 @@ import useCartStore from "../store/cartStore";
 import HeroBanner from "../components/HeroBanner";
 import CategorySection from "../components/7/CategorySection";
 import { 
-  dairySubCategories, electronicsSubCategories, grocerySubCategories, 
-  kidsSubCategories, partySubCategories, studySubCategories 
+  dairySubCategories, 
+  electronicsSubCategories, 
+  grocerySubCategories, 
+  kidsSubCategories, 
+  partySubCategories, 
+  studySubCategories 
 } from "../data/categories";
 import DailyItems from "../components/4/DailyItems";
 import Category from "../components/1/Category";
@@ -16,9 +20,27 @@ import FeaturedProducts from "../components/6/FeaturedProducts";
 const HomePage = () => {
   const clearCart = useCartStore((state) => state.clearCart);
 
-  // New State for Category and Subcategory
+  // 1. Lifted State: Manages the active category and subcategory globally on this page
   const [activeCategory, setActiveCategory] = useState("All");
-  const [activeSubCategory, setActiveSubCategory] = useState("Apples");
+  const [activeSubCategory, setActiveSubCategory] = useState("");
+
+  // 2. Data Mapping: Dynamically links category names to their imported data arrays
+  const categoryDataMap = {
+    "Fruits": grocerySubCategories, 
+    "Vegetables": grocerySubCategories,
+    "Dairy": dairySubCategories,
+    "Snacks": partySubCategories,
+    "Beverages": electronicsSubCategories,
+  };
+
+  // Get the subcategories for the current selection, default to empty array
+  const currentSubItems = categoryDataMap[activeCategory] || [];
+
+  // 3. Change Handler: Resets subcategory when the main category changes
+  const handleCategoryChange = (catName) => {
+    setActiveCategory(catName);
+    setActiveSubCategory(""); // Reset sub-selection when switching main categories
+  };
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -31,21 +53,22 @@ const HomePage = () => {
         />
       </div>
 
-      {/* Passing State and Setters as Props */}
+      {/* Main Category Bar */}
       <Category 
         activeCat={activeCategory} 
-        onCategoryChange={setActiveCategory} 
+        onCategoryChange={handleCategoryChange} 
       />
 
-      {/* Only show Subcategory bar if a category like Fruits or Vegetables is picked */}
-      {(activeCategory === "Fruits" || activeCategory === "Vegetables" || activeCategory === "All") && (
+      {/* 4. Dynamic Subcategory Bar: Shows whenever a category with sub-items is selected */}
+      {activeCategory !== "All" && currentSubItems.length > 0 && (
         <Subcategory 
+          items={currentSubItems} 
           activeSub={activeSubCategory} 
           onSubChange={setActiveSubCategory} 
         />
       )}
 
-      {/* Logic: If 'All' is selected, show the default landing page */}
+      {/* 5. Conditional Rendering: Minimal switch between 'All' view and 'Filtered' view */}
       {activeCategory === "All" ? (
         <>
           <HeroBanner />
@@ -82,16 +105,18 @@ const HomePage = () => {
           </div>
         </>
       ) : (
-        /* Logic: If a specific category is picked, show the Category-Specific View */
+        /* Category-Specific View */
         <div className="p-6 bg-white min-h-[400px]">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
             {activeCategory} Products
           </h2>
+          <p className="text-gray-500 mb-6 italic">
+            Showing items for {activeCategory} {activeSubCategory ? `> ${activeSubCategory}` : ""}
+          </p>
+          
+          {/* Placeholder for filtered Product Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {/* Here you would map your filtered products based on activeCategory */}
-            <p className="col-span-full text-gray-500 italic">
-              Showing products for {activeCategory} {activeCategory === "Fruits" ? `> ${activeSubCategory}` : ""}...
-            </p>
+             {/* ProductCard components would be mapped here in a future task */}
           </div>
         </div>
       )}

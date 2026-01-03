@@ -1,5 +1,10 @@
 ## 🛒 🔗 [Product-store-frontend Project](http://general-store2.netlify.app/) 
 
+**⚠️ Note:**
+This repository is maintained for intern learning purposes.
+Unnecessary comments, spam PRs, or direct assignment requests will be closed.
+
+
 A **mini frontend clone inspired by Zepto** [Zepto.com](https://www.zepto.com/) , built using **React + Vite + Tailwind CSS**.  
 This repository is used as a **real-world frontend internship project** where interns collaborate, contribute, and learn industry-standard workflows.
 

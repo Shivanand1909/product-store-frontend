@@ -1,4 +1,4 @@
-import { create } from "zustand"; // CHANGED: Added curly braces
+import { create } from "zustand"; // Added curly braces here
 import { persist, devtools } from "zustand/middleware";
 
 const useAuthStore = create(
@@ -6,25 +6,31 @@ const useAuthStore = create(
     persist(
       (set) => ({
         token: null,
-        user: null, // {id, name, role}
+        user: null,
+        isLoginModalOpen: false, // This tracks if the pop-up is visible
         
-        // --- NEW: Modal State ---
-        isLoginModalOpen: false, 
+        // Actions
+        setAuth: (token, user) => set({ token, user }),
         setLoginModal: (isOpen) => set({ isLoginModalOpen: isOpen }),
         
-        setAuth: (token, user) => set({ token, user }),
         logout: () => {
           set({ token: null, user: null });
+          // Clear cart on logout
           try {
-            // Use a dynamic import or ensure cartStore is handled correctly
-            const useCartStore = require("./cartStore").default;
-            useCartStore.getState().clearCart();
+            // This is a safe way to clear the cart without circular imports
+            localStorage.removeItem("sethji-cart"); 
+            window.location.href = "/"; // Redirect to home
           } catch (e) {
-            console.error("Logout clear cart error:", e);
+            console.error(e);
           }
         },
       }),
-      { name: "sethji-auth" }
+      { 
+        name: "sethji-auth",
+        // We only want to save token and user. 
+        // We DON'T want to save isLoginModalOpen in localStorage.
+        partialize: (state) => ({ token: state.token, user: state.user }),
+      }
     )
   )
 );

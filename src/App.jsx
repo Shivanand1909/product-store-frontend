@@ -10,10 +10,12 @@ import AllCategoriesPage from "./pages/AllCategoriesPage";
 import "./App.css"
 import LoginModal from "./components/LoginModal";
 import ProfilePage from "./pages/ProfilePage";
+import MaintenanceCard from "./components/MaintenanceCard";
 
 function App() {
   return (
     <Router>
+      <MaintenanceCard/>
       <Navbar />
       <LoginModal />
       <Routes>

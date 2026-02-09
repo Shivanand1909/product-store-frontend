@@ -5,7 +5,7 @@ This repository is maintained for intern learning purposes.
 Unnecessary comments, spam PRs, or direct assignment requests will be closed.
 
 
-A **mini frontend clone inspired by Zepto** [Zepto.com](https://www.zepto.com/) , built using **React + Vite + Tailwind CSS**.  
+A **General Store inspired by Zepto** [Zepto.com](https://www.zepto.com/) , built using **React + Vite + Tailwind CSS**.  
 Take reference of ** [Zepto.com](https://www.zepto.com/) to understand User Story provided in document.
 
 This repository is used as a **real-world frontend internship project** where interns collaborate, contribute, and learn industry-standard workflows.

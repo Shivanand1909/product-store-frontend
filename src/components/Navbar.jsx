@@ -24,11 +24,17 @@ const Navbar = () => {
       </Link>
 
       {/* Search (hidden on mobile, visible on sm+) */}
-      <input
-        type="text"
-        placeholder="Search for products..."
-        className="hidden sm:block w-1/2 lg:w-1/3 px-3 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
-      />
+      <div className="hidden sm:flex items-center gap-3 w-1/2 lg:w-1/3">
+  <input
+    type="text"
+    placeholder="Search for products..."
+    className="flex-1 px-3 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
+  />
+
+  <span className="text-sm text-gray-600 whitespace-nowrap">
+    Deliver to Delhi
+  </span>
+</div>
 
       {/* Icons */}
       <div className="flex items-center gap-3 sm:gap-4">

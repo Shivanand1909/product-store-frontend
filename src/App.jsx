@@ -7,43 +7,60 @@ import CartPage from "./pages/CartPage";
 import SubCategoryPage from "./pages/SubCategoryPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import AllCategoriesPage from "./pages/AllCategoriesPage";
-import "./App.css"
 import LoginModal from "./components/LoginModal";
 import ProfilePage from "./pages/ProfilePage";
 import MaintenanceCard from "./components/MaintenanceCard";
+import "./App.css";
 
 function App() {
   return (
     <Router>
-      <MaintenanceCard/>
-      <Navbar />
-      <LoginModal />
-      <Routes>
-        {/* Customer */}
-        <Route path="/" element={<HomePage />} />
-         
-        <Route path="/profile" element={<ProfilePage />} />
-        {/* Admin */}
-        <Route path="/admin" element={<AdminDashboard />} />
+      {/* ── Root wrapper ──────────────────────────────────
+          overflow-x-hidden  → kills horizontal scroll
+          min-h-screen       → page always fills viewport
+          w-full             → never exceeds viewport width */}
+      <div className="overflow-x-hidden min-h-screen w-full">
 
-        {/* Staff */}
-        <Route path="/staff" element={<StaffDashboard />} />
+        <MaintenanceCard />
 
-        <Route path="/cart" element={<CartPage />} />
+        {/* Navbar is fixed → all page content needs top padding */}
+        <Navbar />
 
-        <Route path="/categories" element={<AllCategoriesPage />} />
+        <LoginModal />
 
-        {/* cn => category name/navigation , cid =>categoryId, scid => sub category id */}
-        <Route
-          path="/cn/:categorySlug/:subCategorySlug/cid/:categoryId/scid/:subCategoryId"
-          element={<SubCategoryPage />}
-        />
-        {/* pn => product name , pvid => product viewed id, used in future recommending items to user */}
-        <Route
-          path="/pn/:slug/pvid/:productId"
-          element={<ProductDetailPage />}
-        />
-      </Routes>
+        {/* ── Page content area ──────────────────────────
+            pt-14  = 56px → clears fixed Navbar on mobile
+            sm:pt-16 = 64px → clears taller Navbar on desktop */}
+        <main className="pt-14 sm:pt-16 w-full overflow-x-hidden">
+          <Routes>
+            {/* Customer */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+
+            {/* Admin */}
+            <Route path="/admin" element={<AdminDashboard />} />
+
+            {/* Staff */}
+            <Route path="/staff" element={<StaffDashboard />} />
+
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/categories" element={<AllCategoriesPage />} />
+
+            {/* cn => category name, cid => categoryId, scid => subCategoryId */}
+            <Route
+              path="/cn/:categorySlug/:subCategorySlug/cid/:categoryId/scid/:subCategoryId"
+              element={<SubCategoryPage />}
+            />
+
+            {/* pn => product name, pvid => product viewed id */}
+            <Route
+              path="/pn/:slug/pvid/:productId"
+              element={<ProductDetailPage />}
+            />
+          </Routes>
+        </main>
+
+      </div>
     </Router>
   );
 }

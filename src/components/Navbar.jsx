@@ -15,7 +15,7 @@ const Navbar = () => {
   const user = useAuthStore((s) => s.user);
 
   return (
-    <nav className="bg-white shadow-md px-3 sm:px-6 py-2 sm:py-3 flex items-center justify-between sticky top-0 z-20">
+    <nav className="bg-white shadow-md px-3 sm:px-6 py-2 sm:py-3 flex items-center justify-between sticky top-0 z-50">
       {/* Logo */}
       <Link to="/">
         <h1 className="text-lg sm:text-2xl font-bold text-green-600 app-title cursor-pointer">
@@ -45,7 +45,7 @@ const Navbar = () => {
         </div>
 
         {/* Profile/Login Icon */}
-        <div 
+        <div
           className="flex items-center justify-center p-1 rounded-full hover:bg-green-50 transition-all cursor-pointer"
           onClick={() => (user ? null : setLoginModal(true))} // Open modal only if not logged in
         >

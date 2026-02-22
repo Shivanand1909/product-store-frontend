@@ -12,7 +12,7 @@ const categories = [
 
 const Category = ({ activeCat, onCategoryChange }) => {
   return (
-    <div className="flex gap-4 overflow-x-auto px-3 py-3 bg-white shadow-sm sticky top-[100px] sm:top-[64px] z-10 scroll-smooth snap-x">
+    <div className="flex gap-4 overflow-x-auto px-3 py-3 bg-white shadow-sm sticky top-[100px] sm:top-[64px] z-30 scroll-smooth snap-x">
       {categories.map((cat) => (
         <div
           key={cat.name}

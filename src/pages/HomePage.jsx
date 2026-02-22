@@ -46,7 +46,7 @@ const HomePage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Mobile Search */}
-      <div className="sm:hidden px-3 py-2 bg-white sticky top-[56px] z-10 shadow-sm">
+      <div className="sm:hidden px-3 py-2 bg-white sticky top-[56px] z-40 shadow-sm">
         <input
           type="text"
           placeholder="Search for products..."
